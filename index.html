@@ -1,15 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <!--Font Awsome KIT -->
+    <script
+      src="https://kit.fontawesome.com/5bbee51655.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Tailwind and DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container mx-auto">
+      <!-- Navbar section -->
+      <nav class="p-4">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <h1 class="text-4xl font-mulish font-black">Retro</h1>
+          </div>
+          <div class="navbar-end">
+            <i class="fa-solid fa-house pr-6"></i>
+            <i class="fa-solid fa-pencil pr-6"></i>
+            <i class="fa-solid fa-user-group pr-6"></i>
+            <i class="fa-regular fa-flag pr-6"></i>
+            <a
+              class="btn btn-active btn-accent rounded-[50px] text-white bg-[#797DFC] border-none"
+              >Sign In</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Banner Section -->
+      <section
+        class="bg-black h-[550px] lg:rounded-3xl flex flex-col lg:flex-row justify-evenly items-center"
+      >
+        <div class="space-y-5 text-white">
+          <h2 class="text-5xl font-extrabold">
+            Welcome to the <br />
+            <span class="text-blue-900">ReTro</span> Forum
+          </h2>
+          <p>
+            Share your favorite opinion and win and wp <br />
+            forum coffee mug!
+          </p>
+          <input id="search-field"
+            class="p-3 rounded-xl text-black"
+            type="text"
+            placeholder="Search here anything"
+          />
+          <button class="btn bg-[#797DFC] border-none">Search</button>
+        </div>
+
+        <div class="text-black bg-white flex p-7 gap-5 rounded-3xl">
+          <div class="space-y-3">
+            <p>Registered Users</p>
+            <p>Forum</p>
+            <p>Topics</p>
+            <p>Replies</p>
+          </div>
+
+          <div class="space-y-3">
+            <p>01</p>
+            <p>05</p>
+            <p>01</p>
+            <p>01</p>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!--Main -->
+    <main class="container mx-auto mt-20">
+      <!-- Let's Discuss section -->
+      <section>
+        <div class="text-center space-y-4">
+          <h3 class="text-3xl font-extrabold">Let’s Discuss</h3>
+          <p>
+            Yes, you can run unit tests and view the results directly within the
+            app. The <br />
+            integrated testing features allow for a streamlined .
+          </p>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="text-center hidden">
+          <span class="loading loading-dots text-primary loading-lg"></span>
+        </div>
+
+        <!-- Card Section -->
+        <div class="flex flex-col lg:flex-row p-6 justify-center gap-20">
+
+          <!-- Left card -->
+          <div id="retro-card-container">
+            <!-- Dynamic -->
+          </div>
+
+          <!-- Right Card -->
+          <div class="lg:w-[30%]">
+            <div
+              id="right-card-id"
+              class="pr-6 pl-6 p-4 mt-2 rounded-3xl bg-gray-200"
+            >
+              <div class="flex justify-between border">
+                <div class="font-bold text-xl font-mulish text-black">
+                  Title
+                </div>
+                <div class="text-base font-mulish text-[#12132D] font-normal">
+                  Mark as read <span id="selected-info">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Join Forum Section -->
+          <section class="">
+            <div
+              class="m-10 flex flex-col lg:flex-row justify-evenly items-center
+               p-6  bg-[#12132D] rounded-3xl text-white"
+            >
+              <div class="space-y-5">
+                <h1 class="text-4xl font-mulish font-black">Join Our Forum</h1>
+                <p class="text-lg font-mulish font-medium">
+                  Share your favorite opinion and win and wp forum coffee mug!
+                  Yes, you can <br />
+                  run unit tests and view the results directly within the app.
+                </p>
+                <button class="btn bg-[#797DFC] border-none">Registered Now</button>
+              </div>
+              <div class="p-8">
+                <img src="/images/joinforum.png" alt="" />
+              </div>
+            </div>
+          </section>
+      </section>
+
+      <!-- Latest Post Section -->
+      <section>
+        <div class="text-center">
+          <h1 class=" text-4xl font-black font-mulish">
+            Latest Posts
+          </h1>
+          <br />
+          <p >
+            Yes, you can run unit tests and view the <br />
+            &nbsp; results directly within the app. The integrated testing
+            features allow for a streamlined
+          </p>
+        </div>
+      </section>
+
+      <!-- Latest Post Card  -->
+      <section>
+        <div id="discuss-id" class="grid grid-cols-3 gap-6 m-6 p-6"></div>
+      </section>
+
+      
+      
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <section class="mt-24">
+          <footer
+            class="h-[400px] footer footer-center p-10 bg-base-200 text-base-content rounded"
+          >
+            <div>
+              <h1 class="text-4xl font-mulish font-black">ReTro</h1>
+              <p class="text-base font-mulish font-normal">
+                Live Explore and Continue
+              </p>
+              <div class="flex gap-6 pt-6">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+                <i class="fa-brands fa-twitter fa-2xl"></i>
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+                <i class="fa-brands fa-github fa-2xl"></i>
+              </div>
+            </div>
+  
+            <aside>
+              <p>Copyright © 2024 - All right reserved by Rakhula LTD</p>
+            </aside>
+          </footer>
+        </section>
+      </footer>
+
+      <script src="/js/retro.js"></script>
+  </body>
 </html>
