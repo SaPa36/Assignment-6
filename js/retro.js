@@ -69,7 +69,7 @@ const displayRetro = (retro) =>{
                     </div>
 
                     <div class="pb-6 pr-6">
-                        <button onclick="clickMe('${i.title.replace("'"," ")}','${i.view_count}')" 
+                        <button onclick="clickMe('${i.title}','${i.view_count}')" 
                         class="btn bg-[#10B981] rounded-[50%]"><i class="fa-regular fa-envelope"></i></button>
                     </div>
                 </div>
@@ -78,8 +78,12 @@ const displayRetro = (retro) =>{
             `;
             retroContainer.appendChild(retroCard);
         });
+        // Hide Loading Spinner
+    loadingSpinner(false);
+}, 2000);
         
-    });
+    
+    
 };
 
 const loadingSpinner = (isLoading) =>{
@@ -95,8 +99,6 @@ const handleSearch = () => {
     loadingSpinner(true);
     const searchField = document.getElementById("search-field");
     const searchText = searchField.value;
-    console.log(searchText);
-    // loadDataForSearch();
     loadRetro(searchText);
   };
 
